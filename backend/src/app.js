@@ -4,6 +4,7 @@ import cors from "cors";
 import userRouter from './routes/user.routes.js';
 import authRouter from './routes/auth.routes.js';
 import myHotelRoutes from './routes/my-hotels.routes.js';
+import hotelRoutes from './routes/hotels.routes.js'
 import { v2 as cloudinary } from 'cloudinary';
 
 cloudinary.config({
@@ -26,5 +27,6 @@ app.use(cookieParser());
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/my-hotels", myHotelRoutes);
+app.use("/api/hotels", hotelRoutes);
 
 export { app };

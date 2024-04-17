@@ -6,6 +6,7 @@ import MyHotels from './pages/MyHotels.jsx';
 import AddHotel from "./pages/AddHotel.jsx"; // Assuming AddHotel component exists
 import { useAppContext } from './contexts/AppContext.jsx'; // Assuming useAppContext is imported from the correct file path
 import EditHotel from './pages/EditHotel.jsx';
+import Search from './pages/Search.jsx';
 
 const App = () => {
   const { isLoggedIn } = useAppContext();
@@ -24,7 +25,7 @@ const App = () => {
           path="/search"
           element={
             <Layout>
-              <p>Search Page</p>
+              <Search />
             </Layout>
           }
         />
