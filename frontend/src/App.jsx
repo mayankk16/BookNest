@@ -3,6 +3,7 @@ import Layout from './layouts/Layout';
 import Register from './pages/Register';
 import SignIn from "./pages/SignIn";
 import MyHotels from './pages/MyHotels.jsx';
+import Detail from './pages/Detail.jsx';
 import AddHotel from "./pages/AddHotel.jsx"; // Assuming AddHotel component exists
 import { useAppContext } from './contexts/AppContext.jsx'; // Assuming useAppContext is imported from the correct file path
 import EditHotel from './pages/EditHotel.jsx';
@@ -21,6 +22,15 @@ const App = () => {
             </Layout>
           }
         />
+      <Route
+          path="/detail/:hotelId"
+          element={
+            <Layout>
+              <Detail />
+            </Layout>
+          }
+        />
+        
         <Route
           path="/search"
           element={
