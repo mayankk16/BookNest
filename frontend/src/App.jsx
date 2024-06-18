@@ -8,6 +8,8 @@ import AddHotel from "./pages/AddHotel.jsx"; // Assuming AddHotel component exis
 import { useAppContext } from './contexts/AppContext.jsx'; // Assuming useAppContext is imported from the correct file path
 import EditHotel from './pages/EditHotel.jsx';
 import Search from './pages/Search.jsx';
+import Booking from './pages/Booking.jsx';
+import MyBookings from './pages/MyBookings.jsx';
 
 const App = () => {
   const { isLoggedIn } = useAppContext();
@@ -58,6 +60,16 @@ const App = () => {
 
         {isLoggedIn && (
           <>
+
+
+            <Route
+              path="/hotel/:hotelId/booking"
+              element={
+                <Layout>
+                  <Booking />
+                </Layout>
+              }
+            />
             <Route
               path="/add-hotel"
               element={
@@ -81,6 +93,15 @@ const App = () => {
               element={
                 <Layout>
                   <MyHotels />
+                </Layout>
+              }
+            />
+
+            <Route
+              path="/my-bookings"
+              element={
+                <Layout>
+                  <MyBookings />
                 </Layout>
               }
             />
