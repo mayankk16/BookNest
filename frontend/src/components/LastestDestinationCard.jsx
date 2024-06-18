@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
+import { createElement } from "react";
 
 const LatestDestinationCard = ({ hotel }) => {
   return (
-    React.createElement(
+    createElement(
       Link,
       {
         to: `/detail/${hotel._id}`,
         className: "relative cursor-pointer overflow-hidden rounded-md"
       },
-      React.createElement(
+      createElement(
         "div",
         { className: "h-[300px]" },
-        React.createElement(
+        createElement(
           "img",
           {
             src: hotel.imageUrls[0],
@@ -19,12 +20,12 @@ const LatestDestinationCard = ({ hotel }) => {
           }
         )
       ),
-      React.createElement(
+      createElement(
         "div",
         {
           className: "absolute bottom-0 p-4 bg-black bg-opacity-50 w-full rounded-b-md"
         },
-        React.createElement(
+        createElement(
           "span",
           { className: "text-white font-bold tracking-tight text-3xl" },
           hotel.name
