@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layouts/Layout';
+import Home from './pages/Home.jsx';
 import Register from './pages/Register';
 import SignIn from "./pages/SignIn";
 import MyHotels from './pages/MyHotels.jsx';
@@ -20,7 +21,7 @@ const App = () => {
           path="/"
           element={
             <Layout>
-              <p>Home Page</p>
+              <Home />
             </Layout>
           }
         />
