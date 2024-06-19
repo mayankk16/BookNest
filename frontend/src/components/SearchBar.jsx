@@ -9,11 +9,12 @@ const SearchBar = () => {
   const navigate = useNavigate();
   const search = useSearchContext();
 
-  const [destination, setDestination] = useState(search.destination);
-  const [checkIn, setCheckIn] = useState(search.checkIn);
-  const [checkOut, setCheckOut] = useState(search.checkOut);
-  const [adultCount, setAdultCount] = useState(search.adultCount);
-  const [childCount, setChildCount] = useState(search.childCount);
+
+  const [destination, setDestination] = useState(search.destination || "");
+  const [checkIn, setCheckIn] = useState();
+  const [checkOut, setCheckOut] = useState();
+  const [adultCount, setAdultCount] = useState(search.adultCount || 1);
+  const [childCount, setChildCount] = useState(search.childCount || 0);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -88,7 +89,7 @@ const SearchBar = () => {
         <DatePicker
           selected={checkOut}
           onChange={(date) => setCheckOut(date)}
-          selectsStart
+          selectsEnd
           startDate={checkIn}
           endDate={checkOut}
           minDate={minDate}

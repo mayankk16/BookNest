@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 import * as apiClient from "../api-client";
 import { loadStripe } from "@stripe/stripe-js";
 
-const STRIPE_PUB_KEY = import.meta.env.VITE_STRIPE_PUB_KEY || "";
+const STRIPE_PUB_KEY = "pk_test_51PPq0wP4Rh0kp2FAAqaPIQtB75Xlio16kScNlLJYheb6DSOL3Mg6Fvj62NbstZ9JNPq2TvjD8Jj0cWSEQ5xyJZto00SreuT8D8"
 
 const AppContext = React.createContext(undefined);
 const stripePromise = loadStripe(STRIPE_PUB_KEY);
